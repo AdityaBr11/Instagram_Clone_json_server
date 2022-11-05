@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(to right, #403b4a, #e7e9bb)
+        }
+        .create{
+            border: 2px solid rgb(255, 255, 255);
+            width: 35%;
+            height: 560px;
+            margin: auto;
+            margin-top:20px;
+            padding-bottom: 15px;
+            border-radius:0px 30px 0px 30px;
+            /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+            background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+        }
+        input{
+            width:87%;
+            height: 38px;
+            margin-left:30px;
+            margin-bottom:20px;
+            padding:6px 5px;
+            border-radius:5px;
+            margin-top:6px;
+            /* border-width: .1px; */
+            /* border-color:grey; */
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            outline: none;
+            padding:0px 0px 0px 9px;
+            border: solid 3px #eee;
+
+        }
+        label{
+            
+            height: 40px;
+            margin-left:30px;
+            margin-bottom:15px;
+            margin-bottom:30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:16px;
+            color: black
+
+        }
+        h2{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+        button{
+            width:88%;
+            height: 40px;
+            display: block;
+            margin: auto;
+            border-radius: 5px;
+            font-weight: bold;
+            border-color:grey;
+            border: none;
+            background-color: rgb(240, 91, 91);
+            color: white;
+            cursor: pointer;
+        }
+        button:hover{
+            background: linear-gradient(to right, #ff512f, #dd2476);
+            color: white;
+        }
+        p{
+            text-align: center;
+            font-size:15px;
+            width: 97%;
+            margin: auto;
+            color: gray;
+            
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+            margin-bottom: 50px;
+        }
+        #t,#p{
+            color: rgb(39, 39, 158);
+            text-decoration-line: underline;
+            cursor: pointer;
+
+        }
+        #b{
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(39, 39, 158);
+            cursor: pointer;
+        }
+        h3{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size:16px;
+            margin-top:55px;
+            color: black;
+            font-weight: lighter;
+        }
+        img{
+            width:15%;
+            display: block;
+            margin: auto;
+            margin-top:20px;
+        }
+        #gify{
+            border: 0px solid red;
+            width:30%;
+            left: 1%;
+            top:13%;
+            margin: auto;
+            position: absolute;
+        }
+        #gify img{
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div id="gify">
+        <img src="https://i.postimg.cc/VvPdDjy0/WiqK.gif" alt="">
+    </div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" alt="">
+    <div class="create">
+        <h2>Sign Up</h2>
+        <form>
+            <label for="">Email</label><br>
+            <input id="mail" type="email" placeholder="Enter email"><br>
+            <label for="">Mobile Number</label><br>
+            <input id="mob" type="number" placeholder="Enter your Number"><br>
+            <label for="password">Password</label><br>
+            <input type="password" name="password" id="password" placeholder="Enter password" /><br>
+
+            <button onClick="signup()" type="submit">SIGN UP</button>
+            <h3>Already have an account?
+                <a href="index.html" <span id="b">Login</span></h3></a> >
+        
+
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    function signup(){
+        event.preventDefault()
+        let email=document.getElementById("mail").value;
+        let mobile=document.getElementById("mob").value;
+        let password=document.getElementById("password").value;
+        let user={
+            email:email,
+            mobile:mobile,
+            password:password
+        }
+        localStorage.setItem("user",JSON.stringify(user))
+        // console.log(localStorage.getItem("user"));
+        if(email==""||mobile==""||password==""){
+            alert("Some field is blank")
+        }else{
+            alert("Sign up successful now you can login");
+            window.location.href="index.html"
+        }
+        
+        
+    }
+
+
+</script>

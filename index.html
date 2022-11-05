@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(to right, #403b4a, #e7e9bb)
+        }
+        .create{
+            border: 2px solid rgb(255, 255, 255);
+            width: 35%;
+            height: 560px;
+            margin: auto;
+            margin-top:20px;
+            background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+            border-radius:0px 30px 0px 30px;
+            /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+        }
+        input{
+            width:87%;
+            height: 38px;
+            margin-left:30px;
+            margin-bottom:20px;
+            padding:6px 5px;
+            border-radius:5px;
+            margin-top:6px;
+            /* border-width: .1px;
+            border-color:grey; */
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            padding:0px 0px 0px 9px;
+            border: solid 3px #eee;
+            outline: none;
+
+        }
+        label{
+            
+            height: 40px;
+            margin-left:30px;
+            margin-bottom:15px;
+            margin-bottom:30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:16px;
+            /* color: rgb(72, 70, 70); */
+            color: black;
+
+        }
+        h2{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+        button{
+            width:88%;
+            height: 40px;
+            display: block;
+            margin: auto;
+            border-radius: 5px;
+            font-weight: bold;
+            border-color:grey;
+            border: none;
+            background-color: rgb(240, 91, 91);
+            cursor: pointer;
+            color: white;
+        }
+        p{
+            text-align: center;
+            font-size:15px;
+            width: 97%;
+            margin: auto;
+            color: gray;
+            
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+            margin-bottom: 50px;
+        }
+        #t,#p{
+            color: rgb(39, 39, 158);
+            text-decoration-line: underline;
+            cursor: pointer;
+
+        }
+        #b{
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(39, 39, 158);
+            cursor: pointer;
+        }
+        h3{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size:16px;
+            margin-top:55px;
+            color: black;
+            font-weight: lighter;
+        }
+        img{
+            width:15%;
+            display: block;
+            margin: auto;
+            margin-top:20px;
+        }
+        button:hover{
+            background: linear-gradient(to right, #ff512f, #dd2476);
+            color: white;
+        }
+        #gify{
+            border: 0px solid red;
+            width:35%;
+            left: .1%;
+            top:5%;
+            margin: auto;
+            position: absolute;
+            
+        }
+        #gify img{
+            width: 80%;
+            background-image: none;
+            mix-blend-mode:multiply;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="gify">
+        <img src="https://i.postimg.cc/PfDtqsmy/3461c64bcb0001c5a117fe47b17d8389.gif" alt="">
+    </div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" alt="">
+    <div class="create">
+        <h2>Login</h2>
+        <form>
+            <label for="">Email</label><br>
+            <input id="email" type="email" placeholder="Enter email"><br>
+            <!-- <label for="">Mobile Number</label><br>
+            <input id="mob" type="number" placeholder="Enter your Number"><br> -->
+            <label for="password">Password</label><br>
+            <input type="password" name="password" id="password" placeholder="Enter password" /><br>
+            <button onClick="loginfun()" type="submit">Login</button>
+            <h3>Don't have an account?
+                <span id="b" > <a href="signup.html">Sign Up</a></span></h3>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+
+    function loginfun(){
+        event.preventDefault()
+        let ma=document.getElementById("email").value;
+        let pass=document.getElementById("password").value;
+        let data=JSON.parse(localStorage.getItem("user")) ||0;
+        // console.log(data.email)
+        // console.log(data.password);
+        if(ma==""||pass==""){
+            alert("Please fill the information")
+        }else if(data.email!==ma){
+            alert("wrong email")
+        }else if(data.password!=pass){
+            alert("wrong password")
+        }else if(data.email==ma||data.password==pass){
+            alert("Login Successful");
+            window.location.href='main.html'
+            
+        }
+     }
+
+</script>

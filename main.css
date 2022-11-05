@@ -1,0 +1,442 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#head{
+    width: 100%;
+    border: 0px solid green;
+    display: flex;
+    
+}
+#left-side-bar{
+    border: 0px solid red;
+    width: 18%;height: 100%;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+#left-side-bar>div div{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+#ig-logo{
+    width: 46%;
+}
+#left-side-bar>div>div i:hover{
+    font-size: 2.1rem;
+}
+
+#left-side-bar i{
+    font-size: 1.8rem;
+    color: black;
+    font-weight: lighter;
+}
+#left-side-bar p{
+    font-size: 17px;
+    gap:2px;
+    font-weight: 200;
+}
+#profile{
+    width: 13%;
+    border-radius: 90px;
+}
+#top{
+    border: 0px solid red;
+}
+#middle{
+    border: 0px solid red;
+    margin-top: 15%;   
+}
+#middle div{
+    margin-top: 30px;
+    display: flex;
+    gap: 18px;
+}
+#buttom{
+    border: 0px solid red;
+    margin-top: 90%;
+    
+}
+#buttom div{
+    display: flex;
+    gap: 18px;
+}
+#body{
+    border: 0px solid black;
+    width: 40%;
+    height: 100vh;
+    margin-left: 30%;
+    position: relative;
+}
+#sta{
+    border: 0px solid black;
+    width: 100%;
+    height: 95px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    /* padding-left: 24px; */
+    margin-top:20px;
+    padding-top:6px;padding-bottom: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    
+}
+#sta>div img{
+    width:84%;
+    height: 75%;
+    border-radius: 60px;
+    border: 3px solid #ff29f1;
+    padding: 1px;
+    cursor: pointer;
+    flex-wrap: wrap;
+
+}
+#sta>div p{
+    font-size: 12px;
+}
+#cont{
+    border: 0px solid black;
+    height: auto;
+    margin-top: 5%;
+    /* padding: 8px; */
+    margin-bottom:30px;
+}
+#cont img{
+    width: 100%;
+    align-items: center;
+}
+#cont>div{
+    border: 0px solid red;
+    margin-bottom:30px;
+    border-radius:5px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+#right-side-bar{
+    border: 0px solid red;
+    width: 30%;
+    height: auto;
+}
+#right-side-bar img{
+    width: 110%;
+    cursor: pointer;
+}
+/* popup part */
+
+/* THIS IS FOR THE CREATE BUTTON */
+.create-popup{
+    border: 0px solid green;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* opacity: 0.7; */
+    position:fixed;
+    top: 0;
+    display: flex;justify-content: center;align-items: center;
+    display: none;
+    /* overflow-y: visible; */
+    scroll-behavior: none;
+    
+}
+.popup-body{
+    border: 0px solid black;;
+    width: 650px;height: 550px;
+    background-color: #fff;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+.popup-body h3{
+    text-align: center;
+    border: 0px solid black;
+    padding: 5px 5px;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+#id{
+    width: 60%;
+    margin-top:15%;
+    height: 28px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+}
+#caption{
+    margin-top: 5px;
+    width: 60%;
+    height: 120px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid gray;
+    
+}
+#image{
+    width: 60%;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    
+}
+#create_btn{
+    margin-top: 20px;
+    width: 30%;
+    height: 30px;
+    background-color: #0095f6;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.close{
+    position: absolute;
+    top: 20px;
+    right:20px;
+    color: black;
+    cursor: pointer;
+
+}
+.close i{
+    font-size: 2rem;
+}
+/* appending part */
+.pro_top{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;padding-right: 10px;
+    align-items: center;
+    text-align: center;
+    
+}
+.pro_top div{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.pro_top p{
+    margin-left:4%;
+}
+.pro_mid{
+    margin-top:8px;margin-bottom: 8px;
+    cursor: pointer;
+}
+.pro_top img{
+    border: 0px solid gray;
+    width:50px;
+    height: 40px;
+    border-radius: 30px;
+}
+.pro_but{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;padding-right: 5px;
+    
+}
+.pro_but i{
+    font-size: 1.9rem;
+    cursor: pointer;
+}
+.ri-heart-line:hover{
+    color: red;
+
+}
+.like{
+    padding-left: 10px;
+    margin-top: 4px;
+    font-weight: bold;
+}
+.caption{
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+/* for status popup page for jatin sir*/
+.create-popup-tanya{
+    border: 0px solid green;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* opacity: 0.7; */
+    position:fixed;
+    top: 0;
+    display: flex;justify-content: center;align-items: center;
+    display: none;
+    /* overflow-y: visible; */
+    scroll-behavior: none;
+}
+.close1{
+    position: absolute;
+    top: 20px;
+    right:20px;
+    color: white;
+    cursor: pointer;
+
+}
+.close1 i{
+    font-size: 2rem;
+}
+.popup-body-tanya{
+    border: 0px solid black;;
+    width:50%;height:100%;
+    background-color: #fff;
+    border-radius: 6px;
+    text-align: center;
+    display: flex;
+}
+/* for swanand sir */
+.create-popup-kdm{
+    border: 0px solid green;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* opacity: 0.7; */
+    position:fixed;
+    top: 0;
+    display: flex;justify-content: center;align-items: center;
+    display: none;
+    /* overflow-y: visible; */
+    scroll-behavior: none;
+}
+.close2{
+    position: absolute;
+    top: 20px;
+    right:20px;
+    color: white;
+    cursor: pointer;
+
+}
+.close2 i{
+    font-size: 2rem;
+}
+.popup-body-kdm{
+    border: 0px solid black;;
+    width:40%;height:100%;
+    background-color: #fff;
+    border-radius: 6px;
+    text-align: center;
+    display: flex;
+}
+/* for chandra sir */
+.create-popup-chandra{
+    border: 0px solid green;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* opacity: 0.7; */
+    position:fixed;
+    top: 0;
+    display: flex;justify-content: center;align-items: center;
+    display: none;
+    /* overflow-y: visible; */
+    scroll-behavior: none;
+}
+.close3{
+    position: absolute;
+    top: 20px;
+    right:20px;
+    color: white;
+    cursor: pointer;
+
+}
+.close3 i{
+    font-size: 2rem;
+}
+.popup-body-chandra{
+    border: 0px solid black;;
+    width:32%;height:100%;
+    background-color: #fff;
+    border-radius: 6px;
+    text-align: center;
+    display: flex;
+}
+/* for vijeetha miss */
+.create-popup-vij{
+    border: 0px solid green;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* opacity: 0.7; */
+    position:fixed;
+    top: 0;
+    display: flex;justify-content: center;align-items: center;
+    display: none;
+    /* overflow-y: visible; */
+    scroll-behavior: none;
+}
+.close4{
+    position: absolute;
+    top: 20px;
+    right:20px;
+    color: white;
+    cursor: pointer;
+
+}
+.close4 i{
+    font-size: 2rem;
+}
+.popup-body-vij{
+    border: 0px solid black;;
+    width:32%;height:100%;
+    background-color: #fff;
+    border-radius: 6px;
+    text-align: center;
+    display: flex;
+}
+@media (max-width:913px){
+    #left-side-bar{
+        width: 8%;
+    }
+    #ig-logo{
+        display:none;
+    }
+    #right-side-bar{
+        display: none;
+    }
+    #left-side-bar p{
+        display: none;
+    }
+    #profile{
+        width: 70%;
+        border-radius: 90px;
+    }
+    #body{
+        border: 0px solid black;
+        width: 60%;
+        height: 100vh;
+        margin-left: 20%;
+        position: relative;
+    }
+    #cont{
+        border: 0px solid black;
+        height: auto;
+        margin-top: 5%;
+        /* padding: 8px; */
+        margin-bottom:30px;
+    }
+    #cont img{
+        width: 100%;
+        align-items: center;
+    }
+    .close{
+        position: absolute;
+        top: 30px;
+        right:10%;
+        color: black;
+        cursor: pointer;
+    
+    }
+    .close i{
+        font-size: 2rem;
+    }
+    #buttom{
+        margin-top: 2500%;
+    }
+    
+}
+

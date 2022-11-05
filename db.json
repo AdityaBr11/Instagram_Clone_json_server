@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "caption": "Dream place....",
+      "id": "1",
+      "image_url": "https://i.ibb.co/brwCn4y/rishu-bhosale-8-Y0-Ql4-Sj-Gf-Y-unsplash.jpg"
+    },
+    {
+      "caption": "Sun set..",
+      "id": "2",
+      "image_url": "https://i.ibb.co/r2MCxQ1/lawless-capture-K60-S-7-Fufhg-unsplash.jpg"
+    },
+    {
+      "caption": "my pablo panday",
+      "id": "3",
+      "image_url": "https://i.ibb.co/s2PqbSN/DSC-1090.jpg"
+    },
+    {
+      "caption": "diwali special",
+      "id": "4",
+      "image_url": "https://i.ibb.co/xHP98MJ/aditya-anand-20220925-0001.jpg"
+    },
+    {
+      "caption": "sikkim diaries",
+      "id": "25",
+      "image_url": "https://i.ibb.co/jfZcGzr/aditya-anand-20220925-0001.jpg"
+    },
+    {
+      "caption": "wid baby bird..",
+      "id": "60",
+      "image_url": "https://i.ibb.co/Vx0jXnS/aditya-anand-20220925-0003.jpg"
+    },
+    {
+      "caption": "old memories..",
+      "id": "90",
+      "image_url": "https://i.ibb.co/0MKffK8/aditya-anand-20220925-0004.jpg"
+    },
+    {
+      "caption": "my eyes.",
+      "id": "40",
+      "image_url": "https://i.ibb.co/SfPxPKK/my-eyes.jpg"
+    },
+    {
+      "caption": "dark side.",
+      "id": "80",
+      "image_url": "https://i.ibb.co/cT4Kf5v/dark.jpg"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
